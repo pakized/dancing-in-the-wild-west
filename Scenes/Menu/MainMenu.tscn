@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://t5c5agb74jpb" path="res://Scripts/UI/controlsMenu.gd" id="1_35riq"]
 [ext_resource type="Script" uid="uid://dw70fwn46is8f" path="res://Scripts/UI/play_button.gd" id="1_a2ivp"]
 [ext_resource type="Script" uid="uid://ckymxy8iq4qj7" path="res://Scripts/UI/how_to_play.gd" id="2_p4pvn"]
+[ext_resource type="Texture2D" uid="uid://coxsk74j8bf6j" path="res://Assets/UI/ButtonMainMenu.png" id="2_s3ie0"]
+[ext_resource type="Texture2D" uid="uid://cgkxl82wb62ir" path="res://Assets/UI/MainMenu.png" id="4_p4pvn"]
 
 [node name="Node2D" type="Node2D" unique_id=1672142866]
 
@@ -15,37 +17,79 @@ script = ExtResource("1_35riq")
 
 [node name="HowToPlay" type="Button" parent="Control" unique_id=852198440]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 304.0
-offset_right = 351.0
-offset_bottom = 398.0
-text = "how to play"
+offset_left = 44.0
+offset_top = 33.0
+offset_right = 373.0
+offset_bottom = 135.0
+rotation = 0.41015238
+theme_override_icons/icon = ExtResource("2_s3ie0")
 script = ExtResource("2_p4pvn")
+
+[node name="Label" type="Label" parent="Control/HowToPlay" unique_id=709108768]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 14.0
+offset_right = 228.0
+offset_bottom = 79.0
+text = "
+how to play"
 
 [node name="Play" type="Button" parent="Control" unique_id=956867185]
 layout_mode = 0
-offset_left = 364.0
-offset_top = 303.0
-offset_right = 685.0
-offset_bottom = 397.0
-text = "play"
+offset_left = 833.0
+offset_top = 162.99998
+offset_right = 1162.0
+offset_bottom = 265.0
+rotation = -0.23212878
+theme_override_icons/icon = ExtResource("2_s3ie0")
 script = ExtResource("1_a2ivp")
+
+[node name="Label" type="Label" parent="Control/Play" unique_id=205654577]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 43.0
+offset_right = 180.0
+offset_bottom = 66.0
+text = "Play"
 
 [node name="Highsocre" type="Button" parent="Control" unique_id=396988803]
 layout_mode = 0
-offset_left = 714.0
-offset_top = 306.0
-offset_right = 1035.0
-offset_bottom = 400.0
-text = "highscore"
+offset_left = 907.00006
+offset_top = 477.00006
+offset_right = 1236.0001
+offset_bottom = 579.00006
+rotation = 0.27401668
+theme_override_icons/icon = ExtResource("2_s3ie0")
+
+[node name="Label" type="Label" parent="Control/Highsocre" unique_id=1513122309]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 43.0
+offset_right = 162.0
+offset_bottom = 66.0
+text = "Highscore"
 
 [node name="Button4" type="Button" parent="Control" unique_id=724699537]
 layout_mode = 0
-offset_left = 29.0
-offset_top = 435.0
-offset_right = 350.0
-offset_bottom = 529.0
-text = "credits"
+offset_left = -6.9999847
+offset_top = 558.0
+offset_right = 322.0
+offset_bottom = 660.0
+rotation = -0.41015238
+theme_override_icons/icon = ExtResource("2_s3ie0")
+
+[node name="Label" type="Label" parent="Control/Button4" unique_id=1080975511]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 45.0
+offset_right = 184.0
+offset_bottom = 68.0
+text = "Credits"
+
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=1161734910]
+z_index = -1
+position = Vector2(586, 335)
+texture = ExtResource("4_p4pvn")
 
 [connection signal="pressed" from="Control/HowToPlay" to="Control/HowToPlay" method="_on_pressed"]
 [connection signal="pressed" from="Control/Play" to="Control/Play" method="_on_pressed"]
