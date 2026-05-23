@@ -6,10 +6,14 @@ var counter = 0
 var animatedSpritePlayer: AnimatedSprite2D  
 var live = 3
 
+func on_player_hit():
+	live -= 1
+
 func _ready() -> void:
 	animatedSpritePlayer  = $Player.get_node("AnimatedSprite2D")
-
-
+	$"ExplosionRight".hit_player.connect(on_player_hit)
+	$"ExplosionLeft".hit_player.connect(on_player_hit)
+	
 func _process(delta):
 	if waiting:
 		waiting = false
