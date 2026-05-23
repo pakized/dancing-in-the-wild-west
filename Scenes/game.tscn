@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bir1x55tbxt2a" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://b2wrbstjtq0fv" path="res://Scripts/Game/keysShown.gd" id="2_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://4iq83j5nk4xo" path="res://Scenes/Explosion.tscn" id="4_3dryh"]
+[ext_resource type="AudioStream" uid="uid://gfixbo4p745o" path="res://Assets/Audio/sekuora-under-the-sea-240787.mp3" id="5_wowpa"]
 
 [node name="Game" type="Node2D" unique_id=1694810960]
 script = ExtResource("1_3dryh")
@@ -37,3 +38,8 @@ offset_left = 38.0
 offset_top = 20.0
 offset_right = 190.0
 offset_bottom = 72.0
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1891650839]
+stream = ExtResource("5_wowpa")
+autoplay = true
+bus = &"Music"
