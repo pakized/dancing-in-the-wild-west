@@ -53,11 +53,13 @@ func start_sequence() -> void:
 		$"ExplosionLeft".monitoring = true
 		$"ExplosionRight".visible = false
 		$"ExplosionLeft".visible = true
+		$"ExplosionLeft/Soundeffect".play()
 	else:
 		$"ExplosionLeft".monitoring = false
 		$"ExplosionRight".monitoring = true
 		$"ExplosionLeft".visible = false
 		$"ExplosionRight".visible = true
+		$"ExplosionRight/Soundeffect".play()
 	# Explosion nach 0.5 Sekunden ausblenden
 	await get_tree().create_timer(0.5).timeout
 	$"ExplosionLeft".monitoring = false

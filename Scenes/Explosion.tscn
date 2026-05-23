@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bi8hphul5jwj" path="res://Scripts/Game/explosion.gd" id="1_ix64a"]
 [ext_resource type="Texture2D" uid="uid://c53ukwxmljal2" path="res://Assets/Explosion1.png" id="1_mbc3v"]
+[ext_resource type="AudioStream" uid="uid://dqc14hkgtg8tj" path="res://Assets/Audio/dragon-studio-gunshot-511311.mp3" id="3_wcvtd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ix64a"]
 radius = 27.018513
@@ -18,5 +19,8 @@ texture = ExtResource("1_mbc3v")
 visibility_layer = 2
 position = Vector2(287, 214)
 shape = SubResource("CircleShape2D_ix64a")
+
+[node name="Soundeffect" type="AudioStreamPlayer2D" parent="." unique_id=184698484]
+stream = ExtResource("3_wcvtd")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
