@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://ndd48ochw1b5"]
 
+[ext_resource type="Script" uid="uid://cjj3gg0ldca2b" path="res://Scripts/UI/tryAgain.gd" id="1_m5628"]
+
 [node name="Node2D" type="Node2D" unique_id=1335983511]
 
 [node name="Label" type="Label" parent="." unique_id=921403129]
@@ -11,3 +13,13 @@ text = "
 
 
 		                                                                                                                                Game Over"
+
+[node name="Button2" type="Button" parent="." unique_id=197220426]
+offset_left = 807.0
+offset_top = 533.0
+offset_right = 1128.0
+offset_bottom = 627.0
+text = "try again"
+script = ExtResource("1_m5628")
+
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
