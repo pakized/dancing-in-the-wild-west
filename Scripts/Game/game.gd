@@ -11,6 +11,7 @@ var liveLost = 0
 func on_player_hit():
 	live -= 1
 	liveLost += 1
+	$Player/AudioStreamPlayer2D.play()
 
 func _ready() -> void:
 	live = 3
@@ -74,6 +75,6 @@ func start_sequence() -> void:
 	if live == 0:
 		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
 	if score >=36:
-		get_tree().change_scene_to_file("res://Scenes/Menu/MainMenu.tscn")
+		get_tree().change_scene_to_file("res://Scenes/EndingScene.tscn")
 	# Wieder freigeben
 	waiting = true

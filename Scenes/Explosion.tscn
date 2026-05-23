@@ -22,5 +22,6 @@ shape = SubResource("CircleShape2D_ix64a")
 
 [node name="Soundeffect" type="AudioStreamPlayer2D" parent="." unique_id=184698484]
 stream = ExtResource("3_wcvtd")
+bus = &"Effect"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
