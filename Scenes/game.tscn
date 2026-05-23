@@ -31,3 +31,9 @@ offset_left = 618.0
 offset_top = 11.0
 offset_right = 747.0
 offset_bottom = 70.0
+
+[node name="Score" type="Label" parent="." unique_id=2035645615]
+offset_left = 38.0
+offset_top = 20.0
+offset_right = 190.0
+offset_bottom = 72.0

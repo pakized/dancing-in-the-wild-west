@@ -5,13 +5,17 @@ var waiting = true
 var counter = 0
 var animatedSpritePlayer: AnimatedSprite2D  
 var live
+var score = 0
+var liveLost = 0
 
 func on_player_hit():
 	live -= 1
+	liveLost += 1
 
 func _ready() -> void:
 	live = 3
 	$Live.text = "Live %d" % live
+	$Score.text = "Score %d" % score
 	animatedSpritePlayer  = $Player.get_node("AnimatedSprite2D")
 	$ExplosionLeft.monitoring = false
 	$ExplosionRight.monitoring = false
@@ -26,7 +30,7 @@ func _process(delta):
 
 func start_sequence() -> void:
 	counter += 1
-
+	score = counter - liveLost
 	# Dynamische Wartezeit
 	var wait_time := 2.0
 	if counter >= 30:
@@ -63,7 +67,7 @@ func start_sequence() -> void:
 	animatedSpritePlayer.frame = 1
 	
 	
-	
+	$Score.text = "Score %d" % score
 	$Live.text = "Live %d" % live
 	if live == 0:
 		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
