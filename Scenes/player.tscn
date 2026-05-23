@@ -36,6 +36,7 @@ animations = [{
 size = Vector2(86, 165)
 
 [node name="Player" type="CharacterBody2D" unique_id=116701805]
+collision_mask = 2
 script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2054645670]
@@ -43,6 +44,6 @@ position = Vector2(573, 369.00003)
 scale = Vector2(1.6953125, 1.5507813)
 sprite_frames = SubResource("SpriteFrames_fkybt")
 
-[node name="LegCollisionShape" type="CollisionShape2D" parent="." unique_id=1801140994]
+[node name="LegCollisionShape" type="CollisionShape2D" parent="." unique_id=1801140994 groups=["Player"]]
 position = Vector2(662, 492)
 shape = SubResource("RectangleShape2D_6t5aa")

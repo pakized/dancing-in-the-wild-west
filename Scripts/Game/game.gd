@@ -4,6 +4,8 @@ var movements = ["left", "right"]
 var waiting = true
 var counter = 0
 var animatedSpritePlayer: AnimatedSprite2D  
+var live = 3
+
 func _ready() -> void:
 	animatedSpritePlayer  = $Player.get_node("AnimatedSprite2D")
 
@@ -32,20 +34,26 @@ func start_sequence() -> void:
 
 	# 3. Explosion anzeigen
 	if $keysShownNode.text == "left":
+		$"ExplosionRight".monitoring = false
+		$"ExplosionLeft".monitoring = true
 		$"ExplosionRight".visible = false
 		$"ExplosionLeft".visible = true
 	else:
+		$"ExplosionLeft".monitoring = false
+		$"ExplosionRight".monitoring = true
 		$"ExplosionLeft".visible = false
 		$"ExplosionRight".visible = true
-
 	# Explosion nach 0.5 Sekunden ausblenden
 	await get_tree().create_timer(0.5).timeout
+	$"ExplosionLeft".monitoring = false
+	$"ExplosionRight".monitoring = false
 	$"ExplosionLeft".visible = false
-	$"ExplosionRight".visible = false
-	
+	$"ExplosionRight".visible = false	
 	animatedSpritePlayer.frame = 1
 	
 	
+	
+	$Live.text = "Live %d" % live
 	
 	# Wieder freigeben
 	waiting = true

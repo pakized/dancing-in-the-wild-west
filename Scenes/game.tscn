@@ -8,7 +8,7 @@
 [node name="Game" type="Node2D" unique_id=1694810960]
 script = ExtResource("1_3dryh")
 
-[node name="Player" parent="." unique_id=116701805 instance=ExtResource("1_ebmjs")]
+[node name="Player" parent="." unique_id=116701805 groups=["Player"] instance=ExtResource("1_ebmjs")]
 position = Vector2(-7, 70)
 
 [node name="keysShownNode" type="Label" parent="." unique_id=140429570]
@@ -23,4 +23,11 @@ visible = false
 position = Vector2(388, 400)
 
 [node name="ExplosionLeft" parent="." unique_id=463160796 instance=ExtResource("4_3dryh")]
+visible = false
 position = Vector2(221, 399)
+
+[node name="Live" type="Label" parent="." unique_id=420674017]
+offset_left = 618.0
+offset_top = 11.0
+offset_right = 747.0
+offset_bottom = 70.0
