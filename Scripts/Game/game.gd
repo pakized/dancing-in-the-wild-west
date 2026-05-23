@@ -45,5 +45,7 @@ func start_sequence() -> void:
 	
 	animatedSpritePlayer.frame = 1
 	
+	
+	
 	# Wieder freigeben
 	waiting = true

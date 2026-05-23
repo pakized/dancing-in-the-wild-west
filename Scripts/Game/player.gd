@@ -20,5 +20,4 @@ func _process(delta: float) -> void:
 		2:
 			hitbox.position = Vector2(547, 488.5) # Bein rechts
 			hitbox.shape.size = Vector2(86, 165)			
-
 	pass	
