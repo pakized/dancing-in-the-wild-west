@@ -15,9 +15,20 @@ script = ExtResource("1_r18jl")
 layout_mode = 0
 offset_right = 1150.0
 offset_bottom = 647.0
-text = "Music by Sekuora from Pixabay and artifyStudio from Pixabay
+text = "CREDITS
 
-Sound effects by DRAGON-STUDIO and freesound community from Pixabay"
+Music:
+Music from Pixabay (Sekuora, artifyStudio)
+
+Sound Effects:
+Sound effects provided by Pixabay and freesound community (DRAGON-STUDIO, freesound community)
+
+Game Design & Development:
+Pakize
+
+Tools Used:
+Godot Engine – Game Engine
+Aseprite – Pixel Art & Graphics"
 
 [node name="Button3" type="Button" parent="." unique_id=2005017653]
 offset_left = 800.0
