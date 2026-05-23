@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dsugexdgqwdfq"]
+
+[ext_resource type="Script" uid="uid://dtwgn7tfkdh4f" path="res://Scripts/UI/Credits/control.gd" id="1_r18jl"]
+
+[node name="Credits" type="Node2D" unique_id=328369819]
+
+[node name="Control" type="Control" parent="." unique_id=324194949]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 650.0
+script = ExtResource("1_r18jl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1070682659]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 647.0
+
+[node name="Button3" type="Button" parent="." unique_id=2005017653]
+offset_left = 800.0
+offset_top = 536.0
+offset_right = 1121.0
+offset_bottom = 630.0
+text = "go back"
+
+[connection signal="pressed" from="Button3" to="Control" method="_on_button_3_pressed"]

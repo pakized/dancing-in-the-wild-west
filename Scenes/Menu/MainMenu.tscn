@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ctchn78juv8i6"]
 
+[ext_resource type="Script" uid="uid://t5c5agb74jpb" path="res://Scripts/UI/controlsMenu.gd" id="1_35riq"]
 [ext_resource type="Script" uid="uid://dw70fwn46is8f" path="res://Scripts/UI/play_button.gd" id="1_a2ivp"]
+[ext_resource type="Script" uid="uid://ckymxy8iq4qj7" path="res://Scripts/UI/how_to_play.gd" id="2_p4pvn"]
 
 [node name="Node2D" type="Node2D" unique_id=1672142866]
 
@@ -9,16 +11,18 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1151.0
 offset_bottom = 650.0
+script = ExtResource("1_35riq")
 
-[node name="Button" type="Button" parent="Control" unique_id=852198440]
+[node name="HowToPlay" type="Button" parent="Control" unique_id=852198440]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 304.0
 offset_right = 351.0
 offset_bottom = 398.0
 text = "how to play"
+script = ExtResource("2_p4pvn")
 
-[node name="Button2" type="Button" parent="Control" unique_id=956867185]
+[node name="Play" type="Button" parent="Control" unique_id=956867185]
 layout_mode = 0
 offset_left = 364.0
 offset_top = 303.0
@@ -27,7 +31,7 @@ offset_bottom = 397.0
 text = "play"
 script = ExtResource("1_a2ivp")
 
-[node name="Button3" type="Button" parent="Control" unique_id=396988803]
+[node name="Highsocre" type="Button" parent="Control" unique_id=396988803]
 layout_mode = 0
 offset_left = 714.0
 offset_top = 306.0
@@ -43,4 +47,7 @@ offset_right = 350.0
 offset_bottom = 529.0
 text = "credits"
 
-[connection signal="pressed" from="Control/Button2" to="Control/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Control/HowToPlay" to="Control/HowToPlay" method="_on_pressed"]
+[connection signal="pressed" from="Control/Play" to="Control/Play" method="_on_pressed"]
+[connection signal="pressed" from="Control/Highsocre" to="Control" method="_on_highsocre_pressed"]
+[connection signal="pressed" from="Control/Button4" to="Control" method="_on_button_4_pressed"]
