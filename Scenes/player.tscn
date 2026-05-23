@@ -33,7 +33,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6t5aa"]
-size = Vector2(306.5, 373.5)
+size = Vector2(86, 165)
 
 [node name="Player" type="CharacterBody2D" unique_id=116701805]
 script = ExtResource("1_cvnsp")
@@ -45,6 +45,6 @@ sprite_frames = SubResource("SpriteFrames_fkybt")
 frame = 2
 frame_progress = 0.04981099
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1801140994]
-position = Vector2(580.25, 381.75)
+[node name="LegCollisionShape" type="CollisionShape2D" parent="." unique_id=1801140994]
+position = Vector2(547, 488.5)
 shape = SubResource("RectangleShape2D_6t5aa")
