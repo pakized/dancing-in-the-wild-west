@@ -1,13 +1,24 @@
 [gd_scene format=3 uid="uid://ndd48ochw1b5"]
 
 [ext_resource type="Script" uid="uid://cjj3gg0ldca2b" path="res://Scripts/UI/tryAgain.gd" id="1_m5628"]
+[ext_resource type="Texture2D" uid="uid://b0ajiec6d5vew" path="res://Assets/UI/TryAainButton.png" id="1_uib17"]
 [ext_resource type="AudioStream" uid="uid://daot3ataau3le" path="res://Assets/Audio/artifystudio-looping-sad-ambient-12-206123.mp3" id="2_k52d1"]
+[ext_resource type="Texture2D" uid="uid://8btb2rxt5e8" path="res://Assets/UI/GameOver-sheet.png" id="3_ktc4i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uib17"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 46
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
 [node name="Node2D" type="Node2D" unique_id=1335983511]
 
 [node name="Label" type="Label" parent="." unique_id=921403129]
-offset_right = 1155.0
-offset_bottom = 650.0
+offset_left = 350.0
+offset_top = -4.0
+offset_right = 1129.0
+offset_bottom = 201.0
 text = "
 
 
@@ -18,15 +29,31 @@ text = "
                                                                                       you never improved your dancing and also.... you died "
 
 [node name="Button2" type="Button" parent="." unique_id=197220426]
-offset_left = 807.0
+offset_left = 810.0
 offset_top = 533.0
-offset_right = 1128.0
-offset_bottom = 627.0
-text = "try again"
+offset_right = 1139.0
+offset_bottom = 635.0
+theme_override_icons/icon = ExtResource("1_uib17")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_uib17")
 script = ExtResource("1_m5628")
+
+[node name="Label" type="Label" parent="Button2" unique_id=1358037832]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 46.0
+offset_right = 177.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "try again"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1364583052]
 stream = ExtResource("2_k52d1")
 autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1584536497]
+z_index = -1
+position = Vector2(582, 332)
+texture = ExtResource("3_ktc4i")
 
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
