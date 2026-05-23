@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cbos6se4yx7cs"]
+
+[node name="Node2D" type="Node2D" unique_id=1338576564]
+
+[node name="Control" type="Control" parent="." unique_id=1095915185]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 643.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1219864834]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 644.0
+text = "Story
+You were having fun dancing at a club in the wild west. Unfortunately while dancing you step on the foor of an outlaw. Since he is a nice guy and wants you to get better at dancing, he shoots at your feet in rythm to the music dance to dodge the bullets. You win when you can survive for a day."
+
+[node name="Button2" type="Button" parent="Control/RichTextLabel" unique_id=1795576122]
+layout_mode = 0
+offset_left = 807.0
+offset_top = 532.0
+offset_right = 1128.0
+offset_bottom = 626.0
+text = "play"
+
+[node name="Button3" type="Button" parent="Control/RichTextLabel" unique_id=436665148]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 542.0
+offset_right = 334.0
+offset_bottom = 636.0
+text = "go back"
