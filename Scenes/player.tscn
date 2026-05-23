@@ -42,9 +42,7 @@ script = ExtResource("1_cvnsp")
 position = Vector2(573, 369.00003)
 scale = Vector2(1.6953125, 1.5507813)
 sprite_frames = SubResource("SpriteFrames_fkybt")
-frame = 2
-frame_progress = 0.04981099
 
 [node name="LegCollisionShape" type="CollisionShape2D" parent="." unique_id=1801140994]
-position = Vector2(547, 488.5)
+position = Vector2(662, 492)
 shape = SubResource("RectangleShape2D_6t5aa")
