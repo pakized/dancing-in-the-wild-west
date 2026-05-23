@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://djcva6r10pwub"]
+
+[node name="Node2D" type="Node2D" unique_id=1493641745]
+
+[node name="Control" type="Control" parent="." unique_id=1892723671]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1148.0
+offset_bottom = 647.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1554447462]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 649.0
+text = "
+
+
+           Congratulations you survived the next night .
+      The Outlaw kept his promise and let you live. 
+Not only that with your new Dance skills you were able to win many prices.
+This wouldnt have been possible without your patient dance instructor. "

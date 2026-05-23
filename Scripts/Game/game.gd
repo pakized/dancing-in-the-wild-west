@@ -33,11 +33,11 @@ func start_sequence() -> void:
 	score = counter - liveLost
 	# Dynamische Wartezeit
 	var wait_time := 2.0
-	if counter >= 30:
+	if counter >= 20:
 		wait_time = 0.5
-	elif counter >= 20:
+	elif counter >= 16:
 		wait_time = 1.0
-	elif counter >= 10:
+	elif counter >= 7:
 		wait_time = 1.5
 
 	# 1. Text setzen
@@ -71,6 +71,7 @@ func start_sequence() -> void:
 	$Live.text = "Live %d" % live
 	if live == 0:
 		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
-	
+	if score >=36:
+		get_tree().change_scene_to_file("res://Scenes/Menu/MainMenu.tscn")
 	# Wieder freigeben
 	waiting = true
