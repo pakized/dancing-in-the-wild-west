@@ -4,13 +4,18 @@ var movements = ["left", "right"]
 var waiting = true
 var counter = 0
 var animatedSpritePlayer: AnimatedSprite2D  
-var live = 3
+var live
 
 func on_player_hit():
 	live -= 1
 
 func _ready() -> void:
+	live = 3
+	$Live.text = "Live %d" % live
 	animatedSpritePlayer  = $Player.get_node("AnimatedSprite2D")
+	$ExplosionLeft.monitoring = false
+	$ExplosionRight.monitoring = false
+
 	$"ExplosionRight".hit_player.connect(on_player_hit)
 	$"ExplosionLeft".hit_player.connect(on_player_hit)
 	
@@ -38,6 +43,8 @@ func start_sequence() -> void:
 
 	# 3. Explosion anzeigen
 	if $keysShownNode.text == "left":
+		$"ExplosionLeft".reset()
+		$"ExplosionRight".reset()
 		$"ExplosionRight".monitoring = false
 		$"ExplosionLeft".monitoring = true
 		$"ExplosionRight".visible = false
@@ -58,6 +65,8 @@ func start_sequence() -> void:
 	
 	
 	$Live.text = "Live %d" % live
+	if live == 0:
+		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
 	
 	# Wieder freigeben
 	waiting = true

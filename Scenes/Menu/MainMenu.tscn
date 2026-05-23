@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://ctchn78juv8i6"]
 
+[ext_resource type="Script" uid="uid://dw70fwn46is8f" path="res://Scripts/UI/play_button.gd" id="1_a2ivp"]
+
 [node name="Node2D" type="Node2D" unique_id=1672142866]
 
 [node name="Control" type="Control" parent="." unique_id=414594504]
@@ -23,6 +25,7 @@ offset_top = 303.0
 offset_right = 685.0
 offset_bottom = 397.0
 text = "play"
+script = ExtResource("1_a2ivp")
 
 [node name="Button3" type="Button" parent="Control" unique_id=396988803]
 layout_mode = 0
@@ -39,3 +42,5 @@ offset_top = 435.0
 offset_right = 350.0
 offset_bottom = 529.0
 text = "credits"
+
+[connection signal="pressed" from="Control/Button2" to="Control/Button2" method="_on_pressed"]

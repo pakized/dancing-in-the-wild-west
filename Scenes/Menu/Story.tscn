@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cbos6se4yx7cs"]
 
+[ext_resource type="Script" uid="uid://d3i2mq6kvhq4o" path="res://Scripts/UI/play_button_story.gd" id="1_qb5ky"]
+
 [node name="Node2D" type="Node2D" unique_id=1338576564]
 
 [node name="Control" type="Control" parent="." unique_id=1095915185]
@@ -22,6 +24,7 @@ offset_top = 532.0
 offset_right = 1128.0
 offset_bottom = 626.0
 text = "play"
+script = ExtResource("1_qb5ky")
 
 [node name="Button3" type="Button" parent="Control/RichTextLabel" unique_id=436665148]
 layout_mode = 0
@@ -30,3 +33,5 @@ offset_top = 542.0
 offset_right = 334.0
 offset_bottom = 636.0
 text = "go back"
+
+[connection signal="pressed" from="Control/RichTextLabel/Button2" to="Control/RichTextLabel/Button2" method="_on_pressed"]
