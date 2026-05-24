@@ -15,6 +15,14 @@ run/main_scene="res://Scenes/Menu/MainMenu.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://mxnn7mb4w68r"
+
+[autoload]
+
+HighscoreManager="*uid://uvdwm5mrsl07"
+
 [input]
 
 moveRight={

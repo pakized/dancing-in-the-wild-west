@@ -5,37 +5,10 @@ var waiting = true
 var counter = 0
 var animatedSpritePlayer: AnimatedSprite2D  
 var live
-var score = 0
 var liveLost = 0
-#const SAVEPATH = "res://Scripts/highscores.json"
-#
-#
-#func save_score(player_name: String, score: int):
-	#var scores = load_scores()
-	#scores.append({
-		#"name": player_name,
-		#"score": score
-	#})
-	#scores.sort_custom(func(a, b): return a.score > b.score)
-	#if scores.size() > 10:
-		#scores = scores.slice(0, 10)
-	#var file = FileAccess.open(SAVEPATH, FileAccess.WRITE)
-	#file.store_string(JSON.stringify(scores))
-	#file.close()
-#
-#
-#func load_scores():
-	#if not FileAccess.file_exists(SAVEPATH):
-		#return []
-	#
-	#var file = FileAccess.open(SAVEPATH, FileAccess.READ)
-	#var content = file.get_as_text()
-	#file.close()
-	#var data = JSON.parse_string(content)
-	#if typeof(data) == TYPE_ARRAY:
-		#return data
-	#else:
-		#return []
+
+
+
 
 
 
@@ -43,12 +16,14 @@ var liveLost = 0
 func on_player_hit():
 	live -= 1
 	liveLost += 1
+	if  HighscoreManager.score != 0:
+		HighscoreManager.score = HighscoreManager.score -1 
 	$Player/AudioStreamPlayer2D.play()
 
 func _ready() -> void:
 	live = 3
 	$Live.text = "Live %d" % live
-	$Score.text = "Score %d" % score
+	$Score.text = "Score %d" % HighscoreManager.score
 	animatedSpritePlayer  = $Player.get_node("AnimatedSprite2D")
 	$ExplosionLeft.monitoring = false
 	$ExplosionRight.monitoring = false
@@ -68,7 +43,7 @@ func _process(delta):
 
 func start_sequence() -> void:
 	counter += 1
-	score = counter - liveLost
+	HighscoreManager.score = HighscoreManager.score + 1 
 	# Dynamische Wartezeit
 	var wait_time := 2.0
 	if counter >= 20:
@@ -107,12 +82,15 @@ func start_sequence() -> void:
 	animatedSpritePlayer.frame = 1
 	
 	
-	$Score.text = "Score %d" % score
+	$Score.text = "Score %d" % HighscoreManager.score
 	$Live.text = "Live %d" % live
 	if live == 0:
-		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
-	if score >=36:
-		get_tree().change_scene_to_file("res://Scenes/EndingScene.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Menu/write_name.tscn")
+
+#		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
+		
+	#if HighscoreManager.score >=36:
+		#get_tree().change_scene_to_file("res://Scenes/EndingScene.tscn")
 		
 	# Wieder freigeben
 	waiting = true

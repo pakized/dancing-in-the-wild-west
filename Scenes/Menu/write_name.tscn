@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://wqjokbt1rn6s"]
+
+[ext_resource type="Texture2D" uid="uid://88xtkrl3tb5e" path="res://Assets/UI/Game.png" id="1_60uqv"]
+[ext_resource type="Script" uid="uid://cxo3fwqwfjxbv" path="res://Scripts/UI/Highscore/write_name.gd" id="1_pkjkk"]
+[ext_resource type="Texture2D" uid="uid://coxsk74j8bf6j" path="res://Assets/UI/ButtonMainMenu.png" id="2_pkjkk"]
+
+[node name="WriteName" type="Node2D" unique_id=452109230]
+script = ExtResource("1_pkjkk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1452314528]
+position = Vector2(573, 327)
+texture = ExtResource("1_60uqv")
+
+[node name="Control" type="Control" parent="." unique_id=1080814775]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1146.0
+offset_bottom = 649.0
+
+[node name="LineEdit" type="LineEdit" parent="Control" unique_id=1796529070]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 273.0
+offset_right = 781.0
+offset_bottom = 337.0
+
+[node name="Label" type="Label" parent="Control" unique_id=1696089451]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 242.0
+offset_right = 722.0
+offset_bottom = 285.0
+text = "Enter your name"
+
+[node name="Button" type="Button" parent="Control" unique_id=717934230]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 356.0
+offset_right = 772.0
+offset_bottom = 458.0
+theme_override_icons/icon = ExtResource("2_pkjkk")
+
+[node name="Label" type="Label" parent="Control/Button" unique_id=685285643]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 43.0
+offset_right = 178.0
+offset_bottom = 66.0
+text = "Confirm"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

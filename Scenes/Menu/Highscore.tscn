@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://b88kc1pk276uq"]
 
 [ext_resource type="Script" uid="uid://dxfrf5t6rygha" path="res://Scripts/UI/Highscore/menu.gd" id="1_6m4eu"]
+[ext_resource type="Script" uid="uid://cebxp3xdpdhg7" path="res://Scripts/UI/Highscore/highscore.gd" id="1_oeadk"]
 [ext_resource type="Texture2D" uid="uid://coxsk74j8bf6j" path="res://Assets/UI/ButtonMainMenu.png" id="2_01oqj"]
 [ext_resource type="Texture2D" uid="uid://cvshngn80uuji" path="res://Assets/UI/Ending.png" id="3_oeadk"]
 
 [node name="Node2D" type="Node2D" unique_id=1464504979]
+script = ExtResource("1_oeadk")
 
 [node name="Control" type="Control" parent="." unique_id=1755413339]
 layout_mode = 3
@@ -27,7 +29,13 @@ offset_left = 123.0
 offset_top = 43.0
 offset_right = 163.0
 offset_bottom = 66.0
-text = "menu"
+text = "next"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1741479842]
+layout_mode = 0
+offset_right = 813.0
+offset_bottom = 641.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2063892468]
 z_index = -6
