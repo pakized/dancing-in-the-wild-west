@@ -5,7 +5,7 @@
 You play as a cowboy who accidentally angered a notorious outlaw — and now you have to dodge all **36 bullets** he fires at you.
 
 <p align="center">
-  <img src="dancing-in-the-wild-west/Assets/Story.png" alt="Story Intro" />
+<img src="dancing-in-the-wild-west/Assets/Story.png" alt="Story Intro" />
 </p>
 
 ## Gameplay
