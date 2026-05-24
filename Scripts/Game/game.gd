@@ -84,7 +84,7 @@ func start_sequence() -> void:
 	
 	$Score.text = "Score %d" % HighscoreManager.score
 	$Live.text = "Live %d" % live
-	if live == 0:
+	if live == 0 or HighscoreManager.score >= 36:
 		HighscoreManager.comeFromGame = true
 		get_tree().change_scene_to_file("res://Scenes/Menu/write_name.tscn")
 
