@@ -25,6 +25,11 @@ func _ready() -> void:
 	$"ExplosionLeft".hit_player.connect(on_player_hit)
 	
 func _process(delta):
+	#TODO: instant win for demo delete this later
+	#from here
+	if Input.is_key_pressed(KEY_P):
+		get_tree().change_scene_to_file("res://Scenes/EndingScene.tscn")
+	#to this
 	if waiting:
 		waiting = false
 		start_sequence()
@@ -76,5 +81,6 @@ func start_sequence() -> void:
 		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
 	if score >=36:
 		get_tree().change_scene_to_file("res://Scenes/EndingScene.tscn")
+		
 	# Wieder freigeben
 	waiting = true
