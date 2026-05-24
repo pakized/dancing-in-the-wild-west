@@ -7,6 +7,38 @@ var animatedSpritePlayer: AnimatedSprite2D
 var live
 var score = 0
 var liveLost = 0
+#const SAVEPATH = "res://Scripts/highscores.json"
+#
+#
+#func save_score(player_name: String, score: int):
+	#var scores = load_scores()
+	#scores.append({
+		#"name": player_name,
+		#"score": score
+	#})
+	#scores.sort_custom(func(a, b): return a.score > b.score)
+	#if scores.size() > 10:
+		#scores = scores.slice(0, 10)
+	#var file = FileAccess.open(SAVEPATH, FileAccess.WRITE)
+	#file.store_string(JSON.stringify(scores))
+	#file.close()
+#
+#
+#func load_scores():
+	#if not FileAccess.file_exists(SAVEPATH):
+		#return []
+	#
+	#var file = FileAccess.open(SAVEPATH, FileAccess.READ)
+	#var content = file.get_as_text()
+	#file.close()
+	#var data = JSON.parse_string(content)
+	#if typeof(data) == TYPE_ARRAY:
+		#return data
+	#else:
+		#return []
+
+
+
 
 func on_player_hit():
 	live -= 1

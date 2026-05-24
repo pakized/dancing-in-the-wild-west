@@ -27,7 +27,7 @@ text = "
  
       Not only that with your new Dance skills you were
    able to win many prices. This wouldnt have been possible 
-                     without your patient dance instructor. "
+                     without your patient dancing instructor. "
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1886621287]
 z_index = -1
