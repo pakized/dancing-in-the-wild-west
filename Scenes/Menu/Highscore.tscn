@@ -37,9 +37,27 @@ offset_right = 813.0
 offset_bottom = 641.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 
+[node name="Button3" type="Button" parent="Control" unique_id=237937214]
+visible = false
+layout_mode = 0
+offset_left = 811.0
+offset_top = 534.0
+offset_right = 1132.0
+offset_bottom = 628.0
+theme_override_icons/icon = ExtResource("2_01oqj")
+
+[node name="Label" type="Label" parent="Control/Button3" unique_id=2106214706]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 43.0
+offset_right = 163.0
+offset_bottom = 66.0
+text = "go back"
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2063892468]
 z_index = -6
 position = Vector2(579, 320)
 texture = ExtResource("3_oeadk")
 
 [connection signal="pressed" from="Control/Button2" to="Control" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/Button3" to="." method="_on_button_3_pressed"]
