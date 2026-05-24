@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dsugexdgqwdfq"]
 
 [ext_resource type="Script" uid="uid://dtwgn7tfkdh4f" path="res://Scripts/UI/Credits/control.gd" id="1_r18jl"]
+[ext_resource type="Texture2D" uid="uid://coxsk74j8bf6j" path="res://Assets/UI/ButtonMainMenu.png" id="2_2ey4j"]
+[ext_resource type="Texture2D" uid="uid://bm3a7kiy7785t" path="res://Assets/UI/Credits.png" id="2_i06gd"]
 
 [node name="Credits" type="Node2D" unique_id=328369819]
 
@@ -15,13 +17,14 @@ script = ExtResource("1_r18jl")
 layout_mode = 0
 offset_right = 1150.0
 offset_bottom = 647.0
-text = "CREDITS
+text = "                              CREDITS
 
-Music:
+Music: 
 Music from Pixabay (Sekuora, artifyStudio)
 
 Sound Effects:
-Sound effects provided by Pixabay and freesound community (DRAGON-STUDIO, freesound community)
+Sound effects provided by Pixabay and freesound community
+(DRAGON-STUDIO, freesound community)
 
 Game Design & Development:
 Pakize
@@ -35,6 +38,19 @@ offset_left = 800.0
 offset_top = 536.0
 offset_right = 1121.0
 offset_bottom = 630.0
+theme_override_icons/icon = ExtResource("2_2ey4j")
+
+[node name="Label" type="Label" parent="Button3" unique_id=212326922]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 42.0
+offset_right = 167.0
+offset_bottom = 65.0
 text = "go back"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1934520090]
+z_index = -1
+position = Vector2(577, 324)
+texture = ExtResource("2_i06gd")
 
 [connection signal="pressed" from="Button3" to="Control" method="_on_button_3_pressed"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c1spkr02ign27"]
 
 [ext_resource type="Script" uid="uid://dlveuw2r5e1d8" path="res://Scripts/UI/HowToPlay/Controls.gd" id="1_bxjjc"]
+[ext_resource type="Texture2D" uid="uid://b5me7g0n3s52q" path="res://Assets/UI/HowToPlay.png" id="2_s6vjn"]
 
 [node name="Node2D" type="Node2D" unique_id=1459047982]
 
@@ -15,9 +16,18 @@ script = ExtResource("1_bxjjc")
 layout_mode = 0
 offset_right = 1155.0
 offset_bottom = 646.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "How to play
 
 press the right keys at the right time to avoid getting hit by the bullets 
+
+on the left side it will show you were the next bullet is going to aim
+
+so you have to move the opposite direction 
+
+press a to dodge right
+
+and d to dodge left
 "
 
 [node name="Button2" type="Button" parent="Control/RichTextLabel" unique_id=1471738709]
@@ -35,6 +45,11 @@ offset_top = 527.0
 offset_right = 344.0
 offset_bottom = 621.0
 text = "go back"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=398281234]
+z_index = -1
+position = Vector2(573, 324)
+texture = ExtResource("2_s6vjn")
 
 [connection signal="pressed" from="Control/RichTextLabel/Button2" to="Control" method="_on_button_2_pressed"]
 [connection signal="pressed" from="Control/RichTextLabel/Button3" to="Control" method="_on_button_3_pressed"]
