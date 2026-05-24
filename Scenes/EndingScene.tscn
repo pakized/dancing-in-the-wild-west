@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://djcva6r10pwub"]
 
+[ext_resource type="Texture2D" uid="uid://cvshngn80uuji" path="res://Assets/UI/Ending.png" id="1_4l0lt"]
+
 [node name="Node2D" type="Node2D" unique_id=1493641745]
 
 [node name="Control" type="Control" parent="." unique_id=1892723671]
@@ -12,10 +14,22 @@ offset_bottom = 647.0
 layout_mode = 0
 offset_right = 1155.0
 offset_bottom = 649.0
+theme_override_colors/default_color = Color(0, 0, 0.36862746, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 text = "
 
 
-           Congratulations you survived the next night .
-      The Outlaw kept his promise and let you live. 
-Not only that with your new Dance skills you were able to win many prices.
-This wouldnt have been possible without your patient dance instructor. "
+                                           Congratulations
+ 
+                                you survived the next night .
+
+                  The Outlaw kept his promise and let you live.
+ 
+      Not only that with your new Dance skills you were
+   able to win many prices. This wouldnt have been possible 
+                     without your patient dance instructor. "
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1886621287]
+z_index = -1
+position = Vector2(576, 329)
+texture = ExtResource("1_4l0lt")
