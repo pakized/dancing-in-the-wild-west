@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c1spkr02ign27"]
 
 [ext_resource type="Script" uid="uid://dlveuw2r5e1d8" path="res://Scripts/UI/HowToPlay/Controls.gd" id="1_bxjjc"]
+[ext_resource type="Texture2D" uid="uid://coxsk74j8bf6j" path="res://Assets/UI/ButtonMainMenu.png" id="2_ll22n"]
 [ext_resource type="Texture2D" uid="uid://b5me7g0n3s52q" path="res://Assets/UI/HowToPlay.png" id="2_s6vjn"]
 
 [node name="Node2D" type="Node2D" unique_id=1459047982]
@@ -25,9 +26,9 @@ on the left side it will show you were the next bullet is going to aim
 
 so you have to move the opposite direction 
 
-press a to dodge right
+press \"a\" to dodge right
 
-and d to dodge left
+and \"d\" to dodge left
 "
 
 [node name="Button2" type="Button" parent="Control/RichTextLabel" unique_id=1471738709]
@@ -36,6 +37,14 @@ offset_left = 807.0
 offset_top = 533.0
 offset_right = 1128.0
 offset_bottom = 627.0
+theme_override_icons/icon = ExtResource("2_ll22n")
+
+[node name="Label" type="Label" parent="Control/RichTextLabel/Button2" unique_id=1435283305]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 44.0
+offset_right = 170.0
+offset_bottom = 67.0
 text = "play"
 
 [node name="Button3" type="Button" parent="Control/RichTextLabel" unique_id=1028528790]
@@ -44,6 +53,14 @@ offset_left = 23.0
 offset_top = 527.0
 offset_right = 344.0
 offset_bottom = 621.0
+theme_override_icons/icon = ExtResource("2_ll22n")
+
+[node name="Label" type="Label" parent="Control/RichTextLabel/Button3" unique_id=946302482]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 45.0
+offset_right = 163.0
+offset_bottom = 68.0
 text = "go back"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=398281234]
