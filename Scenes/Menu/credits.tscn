@@ -50,7 +50,8 @@ text = "go back"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1934520090]
 z_index = -1
-position = Vector2(577, 324)
+position = Vector2(574, 321.5)
+scale = Vector2(1.0121527, 1.007716)
 texture = ExtResource("2_i06gd")
 
 [connection signal="pressed" from="Button3" to="Control" method="_on_button_3_pressed"]

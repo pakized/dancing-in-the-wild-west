@@ -34,8 +34,8 @@ func _ready() -> void:
 func _process(delta):
 	#TODO: instant win for demo delete this later
 	#from here
-	if Input.is_key_pressed(KEY_P):
-		get_tree().change_scene_to_file("res://Scenes/EndingScene.tscn")
+	#if Input.is_key_pressed(KEY_P):
+	#	get_tree().change_scene_to_file("res://Scenes/EndingScene.tscn")
 	#to this
 	if waiting:
 		waiting = false

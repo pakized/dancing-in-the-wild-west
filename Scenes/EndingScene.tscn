@@ -31,5 +31,6 @@ text = "
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1886621287]
 z_index = -1
-position = Vector2(576, 329)
+position = Vector2(570.49994, 320)
+scale = Vector2(1.0303818, 1.0401233)
 texture = ExtResource("1_4l0lt")
