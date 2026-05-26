@@ -1,3 +1,17 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+
+# Builds
+*.exe
+*.pck
+*.wasm
+*.zip
+
+# Godot Import
+.import/
+*.import
+
+# Cache
+.export/
