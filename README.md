@@ -1,8 +1,19 @@
 # 👢 Dancing in the Wild West
 
+
+## ▶ Play the Game on itch.io
+[Click here to play](https://pakize.itch.io/dancing-in-the-wild-west)
+
+
+## Built With
+- Godot Engine
+- GDScript
+  
 ## Description
-**Dancing in the Wild West** is a fast‑paced 2D rhythm game developed with **Godot**.  
-You play as a cowboy who accidentally angered a notorious outlaw — and now you have to dodge all **36 bullets** he fires at you.
+**Dancing in the Wild West** is a fast-paced 2D rhythm game developed with **Godot**.
+
+You play as a cowboy who accidentally angers a notorious outlaw — and now you have to dodge all **36 bullets** fired at you.
+
 
 <p align="center">
 <img src="Story.png" alt="Story Intro" />
@@ -16,8 +27,15 @@ Your goal is simple: **survive the entire sequence without getting hit**.
   <img src="Gameplay.png" alt="Gameplay" />
 </p>
 
-## Controls
-- **Move left/right:** A / D
+### Controls
+
+- Move left: **A**
+- Move right: **D**
+
+
 
 ## Objective
-- **Dodge all 36 bullets** to survive the outlaw’s attack.
+
+Survive the full attack sequence by dodging all 36 bullets.
+
+
