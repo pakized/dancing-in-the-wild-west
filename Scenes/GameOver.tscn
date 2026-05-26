@@ -53,7 +53,8 @@ autoplay = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1584536497]
 z_index = -1
-position = Vector2(582, 332)
+position = Vector2(565, 323)
+scale = Vector2(1.0295138, 1.0277778)
 texture = ExtResource("3_ktc4i")
 
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

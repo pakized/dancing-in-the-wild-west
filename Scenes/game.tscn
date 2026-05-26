@@ -47,5 +47,6 @@ bus = &"Music"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1470012133]
 z_index = -2
-position = Vector2(583, 327)
+position = Vector2(575, 324)
+scale = Vector2(1.0138888, 1.0092592)
 texture = ExtResource("6_i6g32")

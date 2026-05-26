@@ -88,7 +88,8 @@ text = "Credits"
 
 [node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=1161734910]
 z_index = -1
-position = Vector2(586, 335)
+position = Vector2(578.99994, 328)
+scale = Vector2(1.013889, 1.0216049)
 texture = ExtResource("4_p4pvn")
 
 [connection signal="pressed" from="Control/HowToPlay" to="Control/HowToPlay" method="_on_pressed"]
